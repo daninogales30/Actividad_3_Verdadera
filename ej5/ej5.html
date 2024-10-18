@@ -1,0 +1,29 @@
+<head>
+    <style>
+        .boton {
+            display: block;
+            width: 100px;
+            cursor: pointer;
+            margin: 10px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boton1" class="boton">Pulsar aquí</div>
+    <div id="boton2" class="boton">Pulsar aquí</div>
+
+    <script>
+        const boton1 = document.getElementById("boton1");
+        const boton2 = document.getElementById("boton2");
+
+        function pulsar(event){
+            alert("El objeto pulsado tiene un id llamado: "+event.currentTarget.id);
+        }
+
+        boton1.addEventListener("click",pulsar);
+        boton2.addEventListener("click",pulsar);
+
+    </script>
+</body>

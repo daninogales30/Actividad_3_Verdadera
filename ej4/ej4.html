@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function cambiarcolor(){
+            document.getElementById("cuadro").addEventListener("mouseover",function cambiar(){
+                document.getElementById("cuadro").style.backgroundColor="green"});
+
+            document.getElementById("cuadro").addEventListener("mouseout", function restablecer(){
+                document.getElementById("cuadro").style.backgroundColor = "";
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div style="display: block; width: 100px; height: 100px;" id="cuadro">
+        Cuadro que cambia al entrar el ratón
+    </div>
+</body>
+
+</html>
