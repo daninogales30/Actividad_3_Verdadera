@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calcularCordenadas(event){
+            const x = event.screenX;
+            const y = event.screenY;
+
+            document.getElementById("cX").value = x;
+            document.getElementById("cY").value = y; 
+        }
+
+        window.addEventListener("load", function (){
+            document.addEventListener("mousemove",calcularCordenadas);
+        });
+    </script>
+</head>
+
+<body>
+    <label>Coordenada X</label>
+    <input id="cX"> </div>
+    <label>Coordenada Y</label>
+    <input id="cY"> </div>
+    
+
+    
+</body>
+
+</html>

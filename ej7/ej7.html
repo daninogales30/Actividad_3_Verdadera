@@ -1,0 +1,35 @@
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <div id="c1" style="background: red"></div>
+    <div id="c2" style="background: white"></div>
+    <div id="c3" style="background: blue"></div>
+
+    <script>
+        function cambiarColor(event){
+            const target = event.relatedTarget; 
+            
+            if (target && target.id === 'c1') { 
+                this.style.background = 'red';
+            } else if (target && target.id === 'c3') { 
+                this.style.background = 'blue';
+            } else { 
+                this.style.background = 'white';
+            }
+        }
+
+        window.addEventListener("load", function () {
+            const centralBlock = document.getElementById('c2');
+            centralBlock.addEventListener('mouseenter', cambiarColor);
+        });
+    </script>
+</body>
