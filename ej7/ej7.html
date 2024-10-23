@@ -15,9 +15,9 @@
     <div id="c3" style="background: blue"></div>
 
     <script>
-        function cambiarColor(event){
+        function cambiarColor(event) {
             const target = event.relatedTarget; 
-            
+
             if (target && target.id === 'c1') { 
                 this.style.background = 'red';
             } else if (target && target.id === 'c3') { 
@@ -30,6 +30,10 @@
         window.addEventListener("load", function () {
             const centralBlock = document.getElementById('c2');
             centralBlock.addEventListener('mouseenter', cambiarColor);
+            centralBlock.addEventListener('mouseleave', function() {
+                // Restablecer color a blanco al salir del bloque central
+                centralBlock.style.background = 'white';
+            });
         });
     </script>
 </body>

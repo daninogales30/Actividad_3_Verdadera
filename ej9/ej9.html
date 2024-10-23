@@ -1,0 +1,31 @@
+<head>
+    <style>
+        #boton {
+            position: absolute;
+            display: none
+        }
+
+        body {
+            height: 200vh
+        }
+    </style>
+</head>
+
+<body>
+    Primera linea o cabecera
+    <div id="boton">Boton</div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 0) {
+                document.getElementById('boton').style.display = 'block';
+                document.getElementById('boton').style.position = 'fixed';
+                document.getElementById('boton').style.bottom = '20px';
+                document.getElementById('boton').style.right = '20px';
+            } else {
+                document.getElementById('boton').style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
