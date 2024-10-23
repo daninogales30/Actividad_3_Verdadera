@@ -1,0 +1,14 @@
+<form>
+    <label>No se aceptan dígitos</label>
+    <input type="text" id="letras" />
+
+    <script>
+        document
+            .getElementById("letras")
+            .addEventListener("keydown", function (event) {
+                if (event.key >= "0" && event.key <= "9") {
+                    event.preventDefault();
+                }
+            });
+    </script>
+</form>
